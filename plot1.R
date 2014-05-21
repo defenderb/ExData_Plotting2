@@ -2,7 +2,7 @@
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
-#Aggrigate Statistic
+#Aggregate Statistic
 tmp <- tapply(NEI$Emissions, NEI$year, sum)
 
 #open png graphic device

@@ -2,8 +2,10 @@
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
+#subset
 subNEI <- subset(NEI, fips == "24510")
-#Aggrigate Statistic
+
+#Aggregate Statistic
 tmp <- tapply(subNEI$Emissions, subNEI$year, sum)
 
 
